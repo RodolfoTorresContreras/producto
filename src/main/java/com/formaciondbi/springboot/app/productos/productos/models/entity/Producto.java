@@ -17,6 +17,21 @@ public class Producto implements Serializable {
     @Column(name = "created_on")
     private Date createdOn;
 
+    @Transient
+    private Integer port;
+
+    public Producto port(int port) {
+        this.port = port;
+        return this;
+    }
+
+    public Integer getPort() {
+        return port;
+    }
+
+    public void setPort(Integer port) {
+        this.port = port;
+    }
 
     public Long getId() {
         return id;
